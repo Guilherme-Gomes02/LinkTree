@@ -1,7 +1,7 @@
 body{
     margin:0;
     overflow:hidden;
-    font-family:Arial, sans-serif;
+    font-family: Georgia, serif;
 }
 
 #bg-image{
@@ -11,8 +11,6 @@ body{
     background-image: url("B5B91CE4-4CE9-439E-BF3A-B7C6BFE6FBAF.gif");
     background-size: cover;
     background-position: center;
-
-    animation: zoom 30s ease-in-out infinite alternate;
 
     filter:
         brightness(0.45)
@@ -164,27 +162,6 @@ body{
         0 0 8px white;
 
     filter: blur(.5px);
-}
-
-@keyframes zoom{
-
-    0%{
-        transform:
-            scale(1)
-            translateX(0px);
-    }
-
-    50%{
-        transform:
-            scale(1.04)
-            translateX(-15px);
-    }
-
-    100%{
-        transform:
-            scale(1.08)
-            translateX(15px);
-    }
 }
 
 @keyframes fall {
