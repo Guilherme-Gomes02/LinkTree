@@ -1,0 +1,221 @@
+body{
+    margin:0;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+}
+
+#bg-image{
+    position: fixed;
+    inset: 0;
+
+    background-image: url("B5B91CE4-4CE9-439E-BF3A-B7C6BFE6FBAF.gif");
+    background-size: cover;
+    background-position: center;
+
+    animation: zoom 30s ease-in-out infinite alternate;
+
+    filter:
+        brightness(0.45)
+        contrast(1.2)
+        grayscale(0.2);
+
+    z-index: -2;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    z-index:-1;
+}
+
+.perfil{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%, -50%);
+
+    text-align:center;
+
+    color:white;
+
+    backdrop-filter: blur(3px);
+
+    padding:25px 35px;
+
+    border-radius:20px;
+}
+
+.avatar{
+    width:140px;
+    height:140px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,.4),
+        0 0 35px rgba(255,255,255,.2);
+
+    transition:.4s;
+}
+
+.avatar:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 20px white,
+        0 0 40px white;
+}
+
+.username{
+    margin:15px 0 5px;
+
+    font-size:70px;
+    font-weight:900;
+
+    letter-spacing:4px;
+
+    color:white;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,.5),
+        0 0 10px rgba(255,255,255,.3);
+
+    -webkit-text-stroke:2px black;
+
+    transition:.4s;
+}
+
+.username:hover{
+    text-shadow:
+        0 0 8px rgba(255,255,255,.7),
+        0 0 15px rgba(255,255,255,.5),
+        0 0 25px rgba(255,255,255,.3);
+}
+
+.bio{
+    color:#d0d0d0;
+
+    font-size:16px;
+
+    letter-spacing:1px;
+
+    margin-top:10px;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,.15);
+}
+
+.socials{
+    margin-top:20px;
+}
+
+.socials a{
+    color:white;
+
+    font-size:35px;
+
+    margin:0 12px;
+
+    transition:.3s;
+}
+
+.socials a:hover{
+    transform:scale(1.2);
+
+    text-shadow:0 0 15px white;
+}
+
+#particles {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+
+    background: white;
+
+    border-radius: 50%;
+
+    animation: fall linear forwards;
+
+    box-shadow:
+        0 0 3px white,
+        0 0 8px white;
+
+    filter: blur(.5px);
+}
+
+@keyframes zoom{
+
+    0%{
+        transform:
+            scale(1)
+            translateX(0px);
+    }
+
+    50%{
+        transform:
+            scale(1.04)
+            translateX(-15px);
+    }
+
+    100%{
+        transform:
+            scale(1.08)
+            translateX(15px);
+    }
+}
+
+@keyframes fall {
+
+    0% {
+        transform:
+            translateY(-20px)
+            translateX(0px);
+    }
+
+    25% {
+        transform:
+            translateY(25vh)
+            translateX(15px);
+    }
+
+    50% {
+        transform:
+            translateY(50vh)
+            translateX(-15px);
+    }
+
+    75% {
+        transform:
+            translateY(75vh)
+            translateX(10px);
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            translateX(-10px);
+    }
+}
